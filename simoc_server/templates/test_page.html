@@ -1,0 +1,13 @@
+<html>
+<head>
+</head>
+<body>
+    {{ my_var }}
+    <ul id="test_ul">
+        {% for i in range(3): %}
+            <li> Python generated in for loop: {{ i }}</li>
+        {% endfor %}
+    </ul>
+</body>
+<script type="text/javascript" src={{ url_for("static", filename="test_script.js") }}></script>
+</html>

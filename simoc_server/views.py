@@ -4,7 +4,7 @@ from collections import OrderedDict
 from uuid import uuid4
 
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
-from flask import request, session, send_from_directory, safe_join
+from flask import request, session, send_from_directory, safe_join, render_template
 
 from simoc_server import app, db
 from simoc_server.serialize import serialize_response, deserialize_request
@@ -22,6 +22,10 @@ game_runners = {}
 @app.before_request
 def deserialize_before_request():
     deserialize_request(request)
+
+@app.route("/test_page", methods=["GET"])
+def test_page():
+    return render_template("test_page.html", my_var="This variable was passed from the python route")
 
 @app.route("/login", methods=["POST"])
 def login():
