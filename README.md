@@ -11,7 +11,7 @@ SIMOC - A Scalable Model of an Isolated, Off-world Colony
 ### Setup
 
 #### Clone Repository
-`git clone --recursive https://github.com/bdmccord/simoc_server.git`
+`git clone --recursive https://github.com/koulyves/simocrepo.git`
 
 #### Install dependencies:
 
